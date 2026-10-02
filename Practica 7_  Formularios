@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+    <!-- Libreria de iconos en linea -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <h1>Formularios</h1>
+    <p>Un formulario permite al visitante cargar datos y que sean enviados al servidor.</p>
+    <p>El HTML no tiene la responsabilidad de registrar los datos en el servidor, 
+    esta actividad se delega a traves de un lenguaje que se ejecute en el servidor (PHP, 
+    ASP, ASP.NET, Node, etc.)</p>
+
+    <!-- =======================================================================
+         1. EJEMPLO BÁSICO
+         Formulario elemental que utiliza un campo de texto estándar para capturar
+         información corta (como un nombre) mediante el atributo type="text".
+         ======================================================================= -->
+    <h2>Ejemplo basico</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre" size="20">
+        <br>
+        <input type="submit" value="enviar">
+    </form>
+
+    <!-- =======================================================================
+         2. FORMULARIO PARA CONTRASEÑAS
+         Utiliza el atributo type="password", el cual oculta visualmente los 
+         caracteres introducidos por el usuario sustituyéndolos por puntos o asteriscos.
+         Incluye también un botón de tipo "reset" para limpiar los campos.
+         ======================================================================= -->
+    <h2>Formulario para contraseñas</h2>
+    <form action="" method="post">
+        Ingresa tu usuario:
+        <input type="text" name="usuario">
+        Ingresa tu contraseña:
+        <input type="password" name="pass">
+        <br>
+        <input type="submit" value="enviar">
+        <input type="reset" value="borrar">
+    </form>
+
+    <!-- =======================================================================
+         3. FORMULARIO CON TEXT AREA
+         Diseñado para recolectar textos largos o comentarios de varias líneas. 
+         Utiliza la etiqueta contenedora <textarea> en lugar de una etiqueta <input>.
+         Adicionalmente, implementa un campo específico para correos con type="email".
+         ======================================================================= -->
+    <h2>Formulario con text area</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        Ingresa tu correo:
+        <input type="email" name="correo">
+        <br>
+        Ingresa tus comentarios:
+        <textarea name="comentarios" rows="1" cols="10"></textarea>
+        <br>
+        <input type="submit" value="enviar">
+        <input type="reset" value="borrar">
+    </form>
+
+    <!-- =======================================================================
+         4. FORMULARIO CON CHECKBOX
+         Permite al usuario seleccionar múltiples opciones de manera simultánea 
+         dentro de un listado mediante casillas de verificación (type="checkbox").
+         ======================================================================= -->
+    <h2>Formularios con checkbox</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        Selecciona los lenguajes que conozcas:
+        <br>
+        <input type="checkbox" name="Java">Java <br>
+        <input type="checkbox" name="Python"> Python <br>
+        <input type="checkbox" name="C#">C# <br>
+        <input type="checkbox" name="Flutter"> Flutter <br>
+    </form>
+
+    <!-- =======================================================================
+         5. FORMULARIO CON RADIOBOTÓN
+         A diferencia de los checkboxes, los botones de opción (type="radio") 
+         obligan al usuario a elegir una única opción excluyente dentro de un grupo, 
+         lo cual se logra compartiendo el mismo valor en el atributo "name".
+         ======================================================================= -->
+    <h2>Formularios con Radioboton</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        Selecciona el maximo de estudios que tienes:
+        <br>
+        <input type="radio" name="estudios" value="1">Sin estudios <br>
+        <input type="radio" name="estudios" value="2">Primaria <br>
+        <input type="radio" name="estudios" value="3">Secundaria <br>
+        <input type="radio" name="estudios" value="4">Preparatoria <br>
+        <input type="submit" value="enviar">
+        <input type="reset" value="borrar">
+    </form>
+
+    <!-- =======================================================================
+         6. FORMULARIO CON SELECCIÓN
+         Presenta una lista desplegable optimizada para ahorrar espacio en la pantalla. 
+         Se compone de la etiqueta principal <select> y múltiples sub-etiquetas <option>.
+         ======================================================================= -->
+    <h2>Formularios con seleccion</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        Selecciona tu pais:
+        <select name="pais">
+            <option value="1">Argentina</option>
+            <option value="2">España</option>
+            <option value="3">Mexico</option>
+            <option value="4">Guatemala</option>
+            <option value="5">Honduras</option>
+            <option value="6">El Salvador</option>
+            <option value="7">Venezuela</option>
+            <option value="8">Colombia</option>
+        </select>
+        <br>
+        <input type="submit" value="enviar">
+        <input type="reset" value="borrar">
+    </form>
+
+    <!-- =======================================================================
+         7. FORMULARIO CON BOTONES
+         Sustituye los inputs tradicionales de envío por elementos <button>, 
+         lo que otorga la flexibilidad de incrustar código HTML interno, como 
+         los iconos vectoriales de Font Awesome (etiquetas <i>).
+         ======================================================================= -->
+    <h2>Formulario con botones</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+        <button type="reset">Borrar <i class="fa fa-trash"></i></button>
+    </form>
+
+    <!-- =======================================================================
+         8. FORMULARIO CON ARCHIVOS
+         Habilita un botón de exploración nativo del sistema operativo mediante 
+         type="file", permitiendo que el usuario cargue documentos o imágenes al servidor.
+         ======================================================================= -->
+    <h2>Formulario con archivos</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        <input type="file" name="archivo">
+        <br>
+        <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+        <button type="reset">Borrar <i class="fa fa-trash"></i></button>
+    </form>
+
+    <!-- =======================================================================
+         9. FORMULARIO CON CAMPOS OCULTOS
+         Utiliza campos invisibles en la interfaz (type="hidden"). Sirven para 
+         enviar datos técnicos en segundo plano de manera automática, como identificadores, 
+         tókenes o, en este caso específico, un registro de hora predefinido.
+         ======================================================================= -->
+    <h2>Formulario con campos ocultos</h2>
+    <form action="" method="post">
+        <input type="hidden" name="hora" value="3:30">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+        <button type="reset">Borrar <i class="fa fa-trash"></i></button>
+    </form>
+
+    <!-- =======================================================================
+         10. FORMULARIO CON AGRUPAMIENTO
+         Utiliza la etiqueta <fieldset> para dibujar un contenedor o marco visual 
+         alrededor de campos relacionados de forma lógica. La etiqueta <legend> 
+         asigna el título o etiqueta principal a dicho recuadro. También añade el 
+         campo type="date" para registrar un calendario interactivo.
+         ======================================================================= -->
+    <h2>Formularios con agrupamiento</h2>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Datos personales</legend>
+            Nombre y apellido:
+            <input type="text" name="nombre_apellido"><br>
+            Documento valido:
+            <input type="file" name="documento"><br>
+            Fecha de nacimiento:
+            <input type="date" name="fecha_nacimiento">
+        </fieldset>
+        <fieldset>
+            <legend>Datos de estudio:</legend>
+            Nombre de la escuela:
+            <input type="text" name="escuela"><br>
+            Certificado valido:
+            <input type="file" name="certificado"><br>
+            Fecha de egreso:
+            <input type="date" name="fecha_egreso">
+        </fieldset>
+        <br>
+        <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+        <button type="reset">Borrar <i class="fa fa-trash"></i></button>
+    </form>
+    <!-- =======================================================================
+         11. FORMULARIO CON LIMITACIONES
+         Muestra el uso de restricciones y atributos de control nativos de HTML:
+         
+         * Atributo 'disabled': Desactiva por completo el campo de entrada. El 
+           usuario no puede interactuar con él ni enfocarlo, y su valor no se 
+           enviará al procesar el formulario en el servidor.
+         
+         * Atributo 'maxlength': Establece un límite estricto sobre el número 
+           máximo de caracteres que el usuario puede introducir en el campo 
+           (en este caso, un máximo de 5 caracteres).
+         
+         * Atributo 'readonly': Define el área de texto como "Solo lectura". El 
+           usuario puede ver el contenido, seleccionarlo y copiarlo, pero no le 
+           está permitido modificarlo ni borrar el texto preexistente.
+         ======================================================================= -->
+    <h2>Formulario con limitaciones</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <!-- Desahbilitacion de campo -->
+        <input type="text" name="nombre" disabled><br>
+        
+        <!-- Limitacion de caracteres -->
+        Contraseña:
+        <input type="password" name="pass" maxlength="5"><br>
+        
+        <!-- Solo lectura -->
+        Comentarios:
+        <textarea name="comentarios" readonly>Este es mi comentario y no se puede borrar</textarea><br>
+    </form>
